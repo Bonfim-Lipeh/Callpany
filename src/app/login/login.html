@@ -1,0 +1,27 @@
+<div class="container-page">
+  <div class="card">
+    <img src="Callpany.PNG" class="logo" alt="Callpany" />
+    <div class="h1">Entrar</div>
+
+    <div class="input-row">
+      <i class="fa fa-user"></i>
+      <input [(ngModel)]="codigo" placeholder="Digite seu Código" />
+    </div>
+
+    <div class="input-row">
+      <i class="fa fa-lock"></i>
+      <input [(ngModel)]="senha" type="password" placeholder="Digite sua senha" />
+    </div>
+
+    <a class="link-right" href="#">Esqueceu a senha?</a>
+
+    <button class="btn" (click)="acessar()">Acessar</button>
+
+    <div class="contact text-center">
+      <p class="small-muted"><i class="fa fa-headphones icon-left"></i>0800 123 4567</p>
+      <p class="small-muted"><i class="fa fa-envelope icon-left"></i> suporte@callpany.com</p>
+    </div>
+
+    <p class="footer-legal">Saiba como seus dados são protegidos: <a href="#" style="color:var(--accent)">Política de Privacidade</a></p>
+  </div>
+</div>

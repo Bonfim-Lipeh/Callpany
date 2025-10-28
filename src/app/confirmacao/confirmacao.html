@@ -1,0 +1,22 @@
+<div class="container-page">
+  <div class="card">
+    <img src="Callpany.PNG" class="logo" alt="Callpany" />
+    <div class="h1">Chamado Cadastrado</div>
+
+    <div style="margin-top:8px; font-size:0.95rem; color:var(--muted);">
+      <p><i class="fa fa-check-circle" style="color:var(--accent)"></i> Seu chamado foi registrado.</p>
+      <p><i class="fa fa-hashtag" style="color:var(--accent)"></i> Segue o número do Ticket: <strong style="color:var(--white)">{{ ticket ? '#' + ticket : '#00000' }}</strong></p>
+      <p><i class="fa fa-bell" style="color:var(--accent)"></i> Você pode acompanhar o andamento em "Visualizar Chamado"</p>
+    </div>
+
+    <button class="btn" (click)="toVisualizar()">Visualizar Chamado</button>
+    <button class="btn btn-ghost" style="margin-top:12px" (click)="toCentral()">Central de Chamados</button>
+
+    <div class="contact text-center">
+      <p class="small-muted"><i class="fa fa-headphones icon-left"></i>0800 123 4567</p>
+      <p class="small-muted"><i class="fa fa-envelope icon-left"></i> suporte@callpany.com</p>
+    </div>
+
+    <p class="footer-legal">Saiba como seus dados são protegidos: <a href="#" style="color:var(--accent)">Política de Privacidade</a></p>
+  </div>
+</div>

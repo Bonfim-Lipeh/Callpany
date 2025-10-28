@@ -1,1 +1,131 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+  --bg: #0b0b0b;
+  --card: #121212;
+  --muted: #bdbdbd;
+  --white: #f5f5f5;
+  --accent: #e63946; /* destaque vermelho */
+  --accent-dark: #b82b37;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+html,body,#root,app-root { height:100%; }
+body {
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, var(--bg) 0%, #070707 100%);
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+}
+
+.container-page {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+/* common card */
+.card {
+  width:100%;
+  max-width:420px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:24px;
+  padding:28px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* logo */
+.logo {
+  display:block;
+  margin: 0 auto 18px;
+  width: 180px;
+  object-fit:contain;
+}
+
+/* headings */
+.h1 {
+  font-size:1.8rem;
+  font-weight:800;
+  text-align:center;
+  margin: 10px 0 22px;
+  color:var(--white);
+}
+
+/* input style */
+.input-row {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background: var(--card);
+  border-radius:10px;
+  padding:12px 14px;
+  margin-bottom:14px;
+  border:1px solid rgba(255,255,255,0.02);
+}
+
+.input-row i { color:var(--accent); font-size:1.05rem; width:20px; text-align:center; }
+.input-row input, .input-row textarea {
+  flex:1;
+  background:transparent;
+  border:none;
+  color:var(--white);
+  font-size:0.95rem;
+  outline:none;
+}
+
+.small-muted {
+  font-size:0.82rem;
+  color:var(--muted);
+}
+
+.link-right { text-align:right; display:block; width:100%; margin-top:-8px; margin-bottom:8px; color:var(--muted); text-decoration:none; font-size:0.85rem; }
+
+.btn {
+  display:inline-block;
+  width:100%;
+  text-align:center;
+  padding:12px 18px;
+  border-radius:28px;
+  background:var(--accent);
+  color:white;
+  font-weight:600;
+  border:none;
+  cursor:pointer;
+  transition:all .18s ease;
+  margin-top:12px;
+}
+
+.btn:hover { background:var(--accent-dark); transform:translateY(-2px); box-shadow:0 6px 20px rgba(230,57,70,0.12); }
+
+.btn-ghost {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.03);
+  color:var(--white);
+}
+
+.contact {
+  margin-top:18px;
+  font-size:0.9rem;
+  color:var(--muted);
+}
+
+.icon-left { margin-right:8px; color:var(--muted); }
+
+.text-center { text-align:center; }
+
+.footer-legal { font-size:0.75rem; color:var(--muted); margin-top:14px; text-align:center; }
+
+.file-btn {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:10px;
+  padding:10px;
+  border:1px dashed rgba(255,255,255,0.03);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  cursor:pointer;
+}
