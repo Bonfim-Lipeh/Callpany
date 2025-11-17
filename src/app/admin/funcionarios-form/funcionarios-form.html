@@ -1,0 +1,15 @@
+<h1>{{ id === 'novo' ? 'Novo Funcionário' : 'Editar Funcionário' }}</h1>
+
+<div class="form">
+  <input [(ngModel)]="funcionario.nome" placeholder="Nome" />
+  <input [(ngModel)]="funcionario.setor" placeholder="Setor" />
+  <input [(ngModel)]="funcionario.telefone" placeholder="Telefone" />
+
+  <select [(ngModel)]="funcionario.risco">
+    <option value="sim">Risco: Sim</option>
+    <option value="não">Risco: Não</option>
+  </select>
+
+  <button class="btn-red" (click)="salvar()">Salvar</button>
+  <button class="btn-red-ghost" routerLink="/admin/funcionarios">Cancelar</button>
+</div>

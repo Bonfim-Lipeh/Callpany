@@ -1,0 +1,54 @@
+<div class="container-page">
+  <div class="card">
+    <img src="assets/callpany.png" class="logo" alt="Callpany" />
+
+    <div class="h1">Abrir Chamado</div>
+
+    <!-- Campo Problema -->
+    <label class="label">Tipo de Problema</label>
+    <div class="input-row">
+      <i class="fa fa-exclamation-triangle"></i>
+      <select [(ngModel)]="problema">
+        <option value="" disabled selected>Selecione o problema</option>
+        <option>Computador não liga</option>
+        <option>Erro em sistema</option>
+        <option>Impressora não funciona</option>
+        <option>Queda de rede</option>
+        <option>Outro</option>
+      </select>
+    </div>
+
+    <!-- Campo Urgência -->
+    <label class="label">Urgência</label>
+    <div class="input-row">
+      <i class="fa fa-bolt"></i>
+      <select [(ngModel)]="urgencia">
+        <option value="" disabled selected>Selecione a urgência</option>
+        <option>Baixa</option>
+        <option>Média</option>
+        <option>Alta</option>
+      </select>
+    </div>
+
+    <!-- Campo Descrição -->
+    <label class="label">Descrição</label>
+    <div class="input-row textarea">
+      <i class="fa fa-align-left"></i>
+      <textarea [(ngModel)]="descricao" placeholder="Descreva o problema com detalhes"></textarea>
+    </div>
+
+    <button class="btn" (click)="enviar()">Enviar Chamado</button>
+
+    <button class="btn-ghost" style="margin-top:12px" (click)="voltar()">Voltar</button>
+
+    <div class="contact text-center">
+      <p class="small-muted"><i class="fa fa-headphones icon-left"></i>0800 123 4567</p>
+      <p class="small-muted"><i class="fa fa-envelope icon-left"></i> suporte@callpany.com</p>
+    </div>
+
+    <p class="footer-legal">
+      Saiba como seus dados são protegidos:
+      <a href="#" style="color:var(--accent)">Política de Privacidade</a>
+    </p>
+  </div>
+</div>

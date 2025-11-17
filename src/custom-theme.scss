@@ -1,0 +1,10 @@
+@use '@angular/material' as mat;
+
+$theme: mat.define-theme((
+  color: (
+    primary: mat.$rose-palette,
+    tertiary: mat.$red-palette
+  )
+));
+
+@include mat.all-component-themes($theme);

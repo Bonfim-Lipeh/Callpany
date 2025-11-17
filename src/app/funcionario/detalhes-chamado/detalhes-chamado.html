@@ -1,0 +1,16 @@
+<h1 class="titulo">Detalhes do Chamado #{{ chamado.id }}</h1>
+
+<div class="card">
+  <p><strong>Problema:</strong> {{ chamado.problema }}</p>
+  <p><strong>Descrição:</strong> {{ chamado.descricao }}</p>
+  <p><strong>Status:</strong> {{ chamado.status }}</p>
+  <p><strong>Urgência:</strong> {{ chamado.urgencia }}</p>
+  <p><strong>Data de abertura:</strong> {{ chamado.criadoEm }}</p>
+
+  <h3>Histórico</h3>
+  <ul>
+    <li *ngFor="let h of chamado.historico">{{ h }}</li>
+  </ul>
+
+<button class="btn-red" (click)="voltar()">Voltar</button>
+</div>

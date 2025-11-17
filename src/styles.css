@@ -129,3 +129,20 @@ body {
   gap:8px;
   cursor:pointer;
 }
+.btn-red {
+  background: #d32f2f;
+  padding: 10px 18px;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn-red:hover {
+  background: #b71c1c;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

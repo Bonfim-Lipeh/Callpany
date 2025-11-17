@@ -1,6 +1,6 @@
 <div class="container-page">
   <div class="card">
-    <img src="Callpany.PNG" class="logo" alt="Callpany" />
+    <img src="assets/Callpany.PNG.png" class="logo" alt="Callpany" />
     <div class="h1">Abrir Chamado</div>
 
     <div class="input-row">
@@ -19,8 +19,19 @@
       <span>{{ arquivoName ? arquivoName : 'Anexar Arquivos' }}</span>
     </label>
 
-    <button class="btn" (click)="enviar()">Enviar</button>
-    <button class="btn btn-ghost" (click)="voltar()" style="margin-top:8px">Voltar</button>
+    <div class="input-row">
+  <i class="fa fa-exclamation-circle"></i>
+  <select [(ngModel)]="nivelSelecionado">
+    <option value="" disabled selected>Urgência</option>
+    <option *ngFor="let nivel of nivelUrgencia" [value]="nivel">
+      {{ nivel }}
+    </option>
+  </select>
+</div>
+    
+    <button class="btn-red" (click)="enviar()">Enviar</button>
+
+    <button class="btn-red" (click)="voltar()">Voltar</button>
 
   </div>
 </div>

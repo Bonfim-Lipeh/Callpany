@@ -1,0 +1,65 @@
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  height: 100vh;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.sidebar {
+  background: #242424;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-title h2 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffffd2;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.menu button {
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+  color: #e1e1e1;
+}
+
+.menu button mat-icon {
+  margin-right: 5px;
+}
+
+.logout-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.main-content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.powerbi-card {
+  background: #2d2d2d;
+  padding: 0;
+  height: calc(100vh - 60px);
+}
+
+.powerbi-card iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

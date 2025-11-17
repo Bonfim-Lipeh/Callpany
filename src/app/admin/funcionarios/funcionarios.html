@@ -1,0 +1,52 @@
+<div class="container-page">
+  <div class="card card-large admin">
+
+    <h1 class="h1">
+      <i class="fa fa-users"></i>
+      Funcionários
+    </h1>
+
+    <button class="btn-add" (click)="adicionar()">
+      <i class="fa fa-plus"></i> Adicionar Funcionário
+    </button>
+
+    <div class="table-wrapper">
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Setor</th>
+            <th>Telefone</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let f of funcionarios">
+            <td>{{ f.id }}</td>
+            <td>{{ f.nome }}</td>
+            <td>{{ f.setor }}</td>
+            <td>{{ f.telefone }}</td>
+
+            <td class="acoes">
+              <button class="btn-edit" (click)="editar(f.id)">
+                <i class="fa fa-pen"></i>
+              </button>
+
+              <button class="btn-delete" (click)="deletar(f.id)">
+                <i class="fa fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+    <button class="btn-ghost" routerLink="/admin">
+      <i class="fa fa-arrow-left"></i> Voltar
+    </button>
+
+  </div>
+</div>

@@ -14,6 +14,9 @@ export class AbrirChamadoComponent {
   problema = '';
   descricao = '';
   arquivoName = '';
+  nivelSelecionado = '';
+  nivelUrgencia: string[] = ['baixa', 'média', 'alta', 'crítica'];
+
 
   constructor(private router: Router) {}
 
@@ -26,9 +29,10 @@ export class AbrirChamadoComponent {
     }
   }
 
-  voltar(): void {
-  history.back();
+  voltar() {
+  this.router.navigate(['/funcionario']);
 }
+
 
 
   enviar() {

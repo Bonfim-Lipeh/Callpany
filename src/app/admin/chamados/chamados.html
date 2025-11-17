@@ -1,0 +1,61 @@
+<div class="container-page">
+  <div class="card card-large admin">
+
+    <h1 class="h1">
+      <i class="fa fa-clipboard-list"></i>
+      Gerenciar Chamados
+    </h1>
+
+    <button class="btn btn-add" routerLink="/admin/chamados/novo">
+      <i class="fa fa-plus"></i> Novo Chamado
+    </button>
+
+    <div class="table-wrapper">
+      <table class="tabela">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Problema</th>
+            <th>Status</th>
+            <th>Urgência</th>
+            <th>Setor</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let c of chamados">
+            <td>{{ c.id }}</td>
+            <td>{{ c.problema }}</td>
+
+            <!-- status recebe classe dinâmica -->
+            <td class="status" [ngClass]="c.status.toLowerCase()">{{ c.status }}</td>
+
+            <!-- urgência recebe classe dinâmica -->
+            <td class="urgencia" [ngClass]="c.urgencia.toLowerCase()">{{ c.urgencia }}</td>
+
+            <td>{{ c.setor }}</td>
+
+            <td class="acoes">
+              <button class="btn-edit"
+                      [routerLink]="['/admin/chamados/editar', c.id]">
+                <i class="fa fa-pen"></i>
+              </button>
+
+              <button class="btn-delete"
+                      (click)="excluir(c.id)">
+                <i class="fa fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+    <button class="btn-ghost" routerLink="/admin">
+      <i class="fa fa-arrow-left"></i> Voltar
+    </button>
+
+  </div>
+</div>

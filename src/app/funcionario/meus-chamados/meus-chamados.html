@@ -1,0 +1,33 @@
+<div class="container-page">
+  <div class="card">
+    <img src="assets/callpany.png" class="logo" alt="Callpany" />
+
+    <div class="h1">Meus Chamados</div>
+
+    <div class="lista-chamados">
+      <div class="item-chamado" *ngFor="let c of meusChamados">
+        <h3 class="id">#{{ c.id }}</h3>
+        <p><strong>Problema:</strong> {{ c.problema }}</p>
+        <p><strong>Status:</strong> {{ c.status }}</p>
+        <p><strong>Urgência:</strong> {{ c.urgencia }}</p>
+        <p><strong>Aberto em:</strong> {{ c.criadoEm }}</p>
+
+        <button class="btn" [routerLink]="['/funcionario/chamado', c.id]">
+          Ver detalhes
+        </button>
+      </div>
+    </div>
+
+    <button class="btn-ghost" style="margin-top:14px" (click)="voltar()">Voltar</button>
+
+    <div class="contact text-center">
+      <p class="small-muted"><i class="fa fa-headphones icon-left"></i>0800 123 4567</p>
+      <p class="small-muted"><i class="fa fa-envelope icon-left"></i> suporte@callpany.com</p>
+    </div>
+
+    <p class="footer-legal">
+      Saiba como seus dados são protegidos:
+      <a href="#" style="color:var(--accent)">Política de Privacidade</a>
+    </p>
+  </div>
+</div>

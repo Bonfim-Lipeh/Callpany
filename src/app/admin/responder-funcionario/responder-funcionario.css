@@ -1,0 +1,16 @@
+.card-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  background: #2d2d2d;
+  color: #fff;
+}
+
+.form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+}

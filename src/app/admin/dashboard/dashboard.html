@@ -1,0 +1,48 @@
+<div class="dashboard-layout">
+
+  <aside class="sidebar">
+
+    <div class="side-title">
+      <h2>CALLPANY</h2>
+    </div>
+
+    <nav class="menu">
+
+      <button mat-button routerLink="/admin/chamados">
+        <mat-icon>assignment</mat-icon>
+        Chamados
+      </button>
+
+      <button mat-button routerLink="/admin/funcionarios">
+        <mat-icon>group</mat-icon>
+        Funcionários
+      </button>
+
+      <button mat-button routerLink="/admin/responder-funcionario">
+         <mat-icon>chat</mat-icon>
+         Responder Funcionário
+      </button>
+
+
+    </nav>
+
+    <div class="logout-box">
+      <button mat-stroked-button color="warn" (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        Sair
+      </button>
+    </div>
+
+  </aside>
+
+  <main class="main-content">
+    <mat-card class="powerbi-card">
+      <iframe 
+        title="PowerBI Callpany"
+        src="https://app.powerbi.com/view?r=eyJrIjoiY2YyZjkwZGEtZDQ5MC00ODc4LTg0MTItODIzY2VhNTFjOGM2IiwidCI6IjU5ZDRmMjQ5LTA1MjAtNDZjZi1iNmIyLTg3M2Q1ZGE1NDNmZSJ9"
+        frameborder="0"
+        allowFullScreen="true"></iframe>
+    </mat-card>
+  </main>
+
+</div>

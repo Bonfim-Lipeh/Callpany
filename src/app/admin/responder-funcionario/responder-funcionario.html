@@ -1,0 +1,17 @@
+<mat-card class="card-container">
+
+  <h2>Responder Funcionário</h2>
+
+  <mat-form-field appearance="outline" class="form-field">
+    <mat-label>Nome do Funcionário</mat-label>
+    <input matInput [(ngModel)]="funcionario">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="form-field">
+    <mat-label>Mensagem</mat-label>
+    <textarea matInput rows="6" [(ngModel)]="mensagem"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="enviar()">Enviar</button>
+
+</mat-card>

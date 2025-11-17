@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../shared/services/auth.service';
+
 
 @Component({
   selector: 'app-login',
@@ -14,14 +16,23 @@ export class LoginComponent {
   codigo = '';
   senha = '';
 
-  constructor(private router: Router) {}
+ constructor(
+  private router: Router,
+  private auth: AuthService
+) {}
+
 
   acessar() {
-    // validação simples (só para demo)
-    if (this.codigo.trim() && this.senha.trim()) {
-      this.router.navigate(['/central']);
-    } else {
-      alert('Informe seu código e senha.');
-    }
+  const user = this.auth.login(this.codigo, this.senha);
+
+  if (!user) {
+    alert('Credenciais inválidas');
+    return;
   }
-}
+
+  if (user.tipo === 'admin') {
+    this.router.navigate(['/admin']);
+  } else {
+    this.router.navigate(['/funcionario']);
+  }
+}}

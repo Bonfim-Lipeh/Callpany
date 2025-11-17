@@ -1,0 +1,37 @@
+.label {
+  margin-top: 14px;
+  margin-bottom: 4px;
+  display: block;
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.input-row select,
+.input-row textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-row textarea {
+  resize: none;
+  height: 90px;
+}
+
+.textarea {
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+select option {
+  background: #1b1b1b;
+}
+
+.card {
+  width: 380px !important;
+}

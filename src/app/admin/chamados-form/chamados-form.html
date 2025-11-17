@@ -1,0 +1,75 @@
+<div class="container-page">
+
+  <div class="card">
+
+    <img src="/assets/callpany.png" alt="Logo" class="logo">
+
+    <h1 class="h1 text-center">
+      {{ editando ? 'Editar Chamado' : 'Novo Chamado' }}
+    </h1>
+
+    <!-- Problema -->
+    <div class="input-row">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <input
+        type="text"
+        placeholder="Descreva o problema"
+        [(ngModel)]="chamado.problema"
+      />
+    </div>
+
+    <!-- Descrição -->
+    <div class="input-row">
+      <i class="fa-solid fa-align-left"></i>
+      <textarea
+        rows="4"
+        placeholder="Descrição detalhada"
+        [(ngModel)]="chamado.descricao"
+      ></textarea>
+    </div>
+
+    <!-- Setor -->
+    <div class="input-row">
+      <i class="fa-solid fa-building"></i>
+      <select [(ngModel)]="chamado.setor">
+        <option value="" disabled selected>Selecione o setor</option>
+        <option>TI</option>
+        <option>RH</option>
+        <option>Financeiro</option>
+      </select>
+    </div>
+
+    <!-- Urgência -->
+    <div class="input-row">
+      <i class="fa-solid fa-bolt"></i>
+      <select [(ngModel)]="chamado.urgencia">
+        <option disabled selected>Selecione a urgência</option>
+        <option>baixa</option>
+        <option>média</option>
+        <option>alta</option>
+        <option>crítica</option>
+      </select>
+    </div>
+
+    <!-- Status -->
+    <div class="input-row">
+      <i class="fa-solid fa-circle-nodes"></i>
+      <select [(ngModel)]="chamado.status">
+        <option disabled selected>Status do chamado</option>
+        <option>aberto</option>
+        <option>em andamento</option>
+        <option>concluido</option>
+      </select>
+    </div>
+
+    <button class="btn" (click)="salvar()">
+      <i class="fa-solid fa-check icon-left"></i>Salvar
+    </button>
+
+    <button class="btn btn-ghost" routerLink="/admin/chamados">
+      <i class="fa-solid fa-arrow-left icon-left"></i>Voltar
+    </button>
+
+  </div>
+
+</div>
